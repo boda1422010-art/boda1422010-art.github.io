@@ -73,7 +73,7 @@ a b{font-size:26px}
 <body>
 
 <div class="card" id="mainCard">
-<img id="profilePic" class="avatar" src="IMG-20261125-WA0007.jpg" alt="Mr Ziko">
+<img id="profilePic" class="avatar" src="IMG-20261126-WA0200.jpg" alt="Mr Ziko">
 <h1>Mr. Ziko Gamal</h1>
 
 <a class="wa link-btn" href="https://wa.me/201028338635"><div class="icon"><i class="fa-brands fa-whatsapp"></i></div><div><b>WhatsApp 1</b></div></a>
@@ -85,19 +85,19 @@ a b{font-size:26px}
 </div>
 
 <script>
-// --- الخلفيات الـ 11 - تحميل سريع من الكاش ---
+// --- الخلفيات - دول اللي انت بعت صورتهم ---
 const backgrounds = [
-  'IMG-20261126-WA7410.jpg',
-  'IMG-20261126-WA3579.jpg',
-  'IMG-20261126-WA0069.jpg',
-  'IMG-20261126-WA6794.jpg',
-  'IMG-20261126-WA4022.jpg',
-  'IMG-20261126-WA1434.jpg',
-  'IMG-20261126-WA8411.jpg',
-  'IMG-20261126-WA5622.jpg',
-  'IMG-20261126-WA0918.jpg',
-  'IMG-20261126-WA6958.jpg',
-  'IMG-20261125-WA4939.jpg'
+  'IMG-20261126-WA0189.jpg',
+  'IMG-20261126-WA0190.jpg',
+  'IMG-20261126-WA0191.jpg',
+  'IMG-20261126-WA0192.jpg',
+  'IMG-20261126-WA0193.jpg',
+  'IMG-20261126-WA0194.jpg',
+  'IMG-20261126-WA0195.jpg',
+  'IMG-20261126-WA0196.jpg',
+  'IMG-20261126-WA0197.jpg',
+  'IMG-20261126-WA0198.jpg',
+  'IMG-20261126-WA0207.jpg'
 ];
 
 const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
@@ -106,7 +106,6 @@ firstImg.src = randomBg;
 firstImg.onload = () => {
   document.body.style.backgroundImage = `url('${randomBg}')`;
 };
-// حمّل باقي الصور في الخلفية عشان الريفريش اللي بعده يبقى سريع
 backgrounds.forEach(src => {
   if (src !== randomBg) {
     const img = new Image();
@@ -114,14 +113,14 @@ backgrounds.forEach(src => {
   }
 });
 
-// --- البروفايل زي ما هو ---
+// --- الصورة الشخصية - الباقي ---
 const pics = [
-"IMG-20261125-WA0007.jpg",
-"IMG-20261125-WA0005.jpg",
-"IMG-20261125-WA0006.jpg",
-"IMG-20261125-WA0004.jpg",
-"IMG-20261125-WA0003.jpg",
-"IMG-20261125-WA0008.jpg"
+"IMG-20261126-WA0200.jpg",
+"IMG-20261126-WA0201.jpg",
+"IMG-20261126-WA0203.jpg",
+"IMG-20261126-WA0205.jpg",
+"IMG-20261126-WA0206.jpg",
+"IMG-20261126-WA0208.jpg"
 ];
 document.getElementById("profilePic").src = pics[Math.floor(Math.random() * pics.length)];
 
