@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mr. Ziko Gamal</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{
+min-height:100vh;background:#000;
+background-size:cover;background-position:center;
+display:flex;justify-content:center;align-items:center;padding:20px 14px;
+color:#fff;overflow:hidden;
+}
+.card{
+width:100%;max-width:280px;
+background:rgba(20,12,4,0.85);
+border:1px solid rgba(245,197,24,0.35);
+border-radius:22px;
+padding:16px 12px 12px;
+text-align:center;
+}
+.avatar{width:70px;height:70px;border-radius:50%;object-fit:cover;border:3px solid #e8d48a}
+h1{font-size:24px;color:#f5e6a8;line-height:1.1;margin-bottom:14px;margin-top:10px}
+a{
+display:flex;align-items:center;gap:10px;text-decoration:none;
+background:rgba(255,255,255,0.08);
+border:1px solid #c9a227;
+padding:9px 10px;border-radius:18px;margin-bottom:8px;
+color:#fff;text-align:left;position:relative;z-index:2;
+will-change:transform,opacity;
+}
+a b{font-size:13px;display:block}
+.icon{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;color:#fff}
+.wa .icon{background:#25D366}
+.fb .icon{background:#1877F2}
+.ig .icon{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+.tk .icon{background:#000;border:1px solid #444}
+.ph .icon{background:#25D366}
+a.sucked{animation:suckAway 0.28s ease-out forwards}
+@keyframes suckAway{
+  0%{transform:scale(1);opacity:1}
+  100%{transform:scale(0);opacity:0}
+}
+a.chosen{
+animation:chosenSuck 0.55s ease-in forwards;
+z-index:50;
+border-color:#f5c518;
+background:#000;
+}
+@keyframes chosenSuck{
+  0%{transform:scale(1)}
+  25%{transform:scale(1.3)}
+  100%{transform:scale(30);opacity:1;border-radius:50%}
+}
+body.sucking .card{animation:cardIn 0.55s ease-in forwards}
+@keyframes cardIn{
+  0%{transform:scale(1);opacity:1}
+  100%{transform:scale(0.1);opacity:0}
+}
+body.sucking h1, body.sucking .avatar{opacity:0}
+@media (min-width:768px){
+.card{max-width:640px;padding:44px 38px 30px;border-radius:34px}
+.avatar{width:170px;height:170px;border-width:5px}
+h1{font-size:54px;margin-bottom:32px;margin-top:16px}
+a{padding:22px 26px;border-radius:28px;margin-bottom:18px;gap:20px}
+a b{font-size:26px}
+.icon{width:70px;height:70px;font-size:34px}
+}
+</style>
+</head>
+<body>
+
+<div class="card" id="mainCard">
+<img id="profilePic" class="avatar" src="IMG-20261125-WA0007.jpg" alt="Mr Ziko">
+<h1>Mr. Ziko Gamal</h1>
+
+<a class="wa link-btn" href="https://wa.me/201028338635"><div class="icon"><i class="fa-brands fa-whatsapp"></i></div><div><b>WhatsApp 1</b></div></a>
+<a class="wa link-btn" href="https://wa.me/201284243774"><div class="icon"><i class="fa-brands fa-whatsapp"></i></div><div><b>WhatsApp 2</b></div></a>
+<a class="fb link-btn" href="https://www.facebook.com/ziko.gamal.315"><div class="icon"><i class="fa-brands fa-facebook-f"></i></div><div><b>Facebook</b></div></a>
+<a class="ig link-btn" href="https://www.instagram.com/ziko_gamal_10"><div class="icon"><i class="fa-brands fa-instagram"></i></div><div><b>Instagram</b></div></a>
+<a class="tk link-btn" href="https://www.tiktok.com/@ziko_gamal_10"><div class="icon"><i class="fa-brands fa-tiktok"></i></div><div><b>TikTok</b></div></a>
+<a class="ph link-btn" href="tel:+201028338635"><div class="icon"><i class="fa-solid fa-phone"></i></div><div><b>Call</b></div></a>
+</div>
+
+<script>
+// --- الخلفيات الـ 11 - تحميل سريع من الكاش ---
+const backgrounds = [
+  'IMG-20261126-WA7410.jpg',
+  'IMG-20261126-WA3579.jpg',
+  'IMG-20261126-WA0069.jpg',
+  'IMG-20261126-WA6794.jpg',
+  'IMG-20261126-WA4022.jpg',
+  'IMG-20261126-WA1434.jpg',
+  'IMG-20261126-WA8411.jpg',
+  'IMG-20261126-WA5622.jpg',
+  'IMG-20261126-WA0918.jpg',
+  'IMG-20261126-WA6958.jpg',
+  'IMG-20261125-WA4939.jpg'
+];
+
+const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+const firstImg = new Image();
+firstImg.src = randomBg;
+firstImg.onload = () => {
+  document.body.style.backgroundImage = `url('${randomBg}')`;
+};
+// حمّل باقي الصور في الخلفية عشان الريفريش اللي بعده يبقى سريع
+backgrounds.forEach(src => {
+  if (src !== randomBg) {
+    const img = new Image();
+    img.src = src;
+  }
+});
+
+// --- البروفايل زي ما هو ---
+const pics = [
+"IMG-20261125-WA0007.jpg",
+"IMG-20261125-WA0005.jpg",
+"IMG-20261125-WA0006.jpg",
+"IMG-20261125-WA0004.jpg",
+"IMG-20261125-WA0003.jpg",
+"IMG-20261125-WA0008.jpg"
+];
+document.getElementById("profilePic").src = pics[Math.floor(Math.random() * pics.length)];
+
+function resetAll(){
+  document.querySelectorAll('.link-btn').forEach(b=>{
+    b.classList.remove('sucked','chosen');
+    b.style.animationDelay = '';
+    b.style.transform = '';
+    b.style.opacity = '';
+  });
+  document.body.classList.remove('sucking');
+}
+resetAll();
+window.addEventListener('pageshow', resetAll);
+window.addEventListener('focus', resetAll);
+document.addEventListener('visibilitychange', ()=>{ if(!document.hidden) resetAll(); });
+
+document.querySelectorAll('.link-btn').forEach(btn => {
+  btn.addEventListener('click', function(e){
+    e.preventDefault();
+    const targetUrl = this.href;
+    if(this.classList.contains('chosen')) return;
+    document.querySelectorAll('.link-btn').forEach((other, index) => {
+      if(other !== btn){
+        other.style.animationDelay = (index * 0.02) + 's';
+        other.classList.add('sucked');
+      }
+    });
+    btn.classList.add('chosen');
+    document.body.classList.add('sucking');
+    setTimeout(resetAll, 2000);
+    setTimeout(()=>{ window.location.href = targetUrl; }, 650);
+  });
+});
+</script>
+
+</body>
+</html>
